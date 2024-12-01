@@ -114,17 +114,22 @@ public void addRecord(String sql, Object... values) {
         System.out.println("Error deleting record: " + e.getMessage());
     }
 }
-     // Dynamic view method to display records from any table
-    public void viewRecords(String sqlQuery, String[] columnHeaders, String[] columnNames) {
-        // Check that columnHeaders and columnNames arrays are the same length
-        if (columnHeaders.length != columnNames.length) {
-            System.out.println("Error: Mismatch between column headers and column names.");
-            return;
+    public void viewRecords(String sqlQuery, String[] columnHeaders, String[] columnNames, Object... params) {
+    // Check that columnHeaders and columnNames arrays are the same length
+    if (columnHeaders.length != columnNames.length) {
+        System.out.println("Error: Mismatch between column headers and column names.");
+        return;
+    }
+
+    try (Connection conn = this.connectDB();
+         PreparedStatement pstmt = conn.prepareStatement(sqlQuery)) {
+
+        // Bind the provided parameters to the prepared statement
+        for (int i = 0; i < params.length; i++) {
+            pstmt.setObject(i + 1, params[i]);
         }
 
-        try (Connection conn = this.connectDB();
-             PreparedStatement pstmt = conn.prepareStatement(sqlQuery);
-             ResultSet rs = pstmt.executeQuery()) {
+        try (ResultSet rs = pstmt.executeQuery()) {
 
             // Print the headers dynamically
             StringBuilder headerLine = new StringBuilder();
@@ -147,10 +152,12 @@ public void addRecord(String sql, Object... values) {
             }
             System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
-        } catch (SQLException e) {
-            System.out.println("Error retrieving records: " + e.getMessage());
         }
+
+    } catch (SQLException e) {
+        System.out.println("Error retrieving records: " + e.getMessage());
     }
+}
     
         
   //-----------------------------------------------
