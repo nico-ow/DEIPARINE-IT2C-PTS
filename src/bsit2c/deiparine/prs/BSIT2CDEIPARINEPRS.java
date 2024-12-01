@@ -25,7 +25,7 @@ public class BSIT2CDEIPARINEPRS {
             int act = 0;
             boolean validAction = false;
 
-            // Input Validation for Action
+           
             while (!validAction) {
                 if (sc.hasNextInt()) {
                     act = sc.nextInt();
@@ -36,7 +36,7 @@ public class BSIT2CDEIPARINEPRS {
                     }
                 } else {
                     System.out.println("Invalid input! Please enter a number.");
-                    sc.next();  // Consume invalid input
+                    sc.next(); 
                 }
             }
 
@@ -58,7 +58,7 @@ public class BSIT2CDEIPARINEPRS {
                     reports.generateReport();
                     break;
                 case 5:
-                    // Exit Confirmation
+                    
                     System.out.print("Are you sure you want to exit? Type (yes) to confirm: ");
                     response = sc.next();
                     if (response.equalsIgnoreCase("yes")) {
