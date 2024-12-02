@@ -10,16 +10,20 @@ public class Parking_Space {
         boolean exit = true;
         
         do {
-            System.out.println("-------------------------------------");
-            System.out.println("PARKING SPACE PANEL");
-            System.out.println("-------------------------------------");
-            System.out.println("(1)ADD PARK SPACE");
-            System.out.println("(2)VIEW PARK SPACE");
-            System.out.println("(3)UPDATE PARK SPACE");
-            System.out.println("(4)DELETE PARK SPACE");
-            System.out.println("(5)EXIT");
-            System.out.println("-------------------------------------");
-            
+        System.out.println("=====================================");
+        System.out.println("      PARKING SPACE MANAGEMENT      ");
+        System.out.println("=====================================");
+
+       
+        System.out.println("  1) Add Park Space");
+        System.out.println("  2) View Park Space");
+        System.out.println("  3) Update Park Space");
+        System.out.println("  4) Delete Park Space");
+        System.out.println("  5) Exit");
+        
+        
+       
+        System.out.println("=====================================");
             System.out.println("Enter Action (1-5):");
             int act = 0;
             boolean validAction = false;
@@ -84,7 +88,7 @@ public class Parking_Space {
     public void addSpace() {
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("Space Number: ");
+        System.out.printf("Space Number: ");
         String snumber = sc.next();
         
        
@@ -93,7 +97,7 @@ public class Parking_Space {
             snumber = sc.next();
         }
         
-        System.out.println("Space Type: ");
+        System.out.printf("Space Type: ");
         String stype = sc.next();
         
         
@@ -111,7 +115,7 @@ public class Parking_Space {
             status = sc.next();
         }
         
-        System.out.println("Location: ");
+        System.out.printf("Location: ");
         String location = sc.next();
         
         

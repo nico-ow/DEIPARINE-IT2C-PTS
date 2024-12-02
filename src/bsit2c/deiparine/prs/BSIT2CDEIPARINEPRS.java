@@ -11,15 +11,19 @@ public class BSIT2CDEIPARINEPRS {
         String response;
 
         do {
-            System.out.println("-------------------------------------");
-            System.out.println("WELCOME TO PARKING RECORDS SYSTEM!");
-            System.out.println("-------------------------------------");
-            System.out.println("1. VEHICLE");
-            System.out.println("2. PARKING SPACE");
-            System.out.println("3. PARKING TRANSACTION");
-            System.out.println("4. REPORTS");
-            System.out.println("5. EXIT");
-            System.out.println("-------------------------------------");
+        System.out.println("============================================");
+        System.out.println("  WELCOME TO PARKING RECORDS SYSTEM!        ");
+        System.out.println("============================================");
+
+       
+        System.out.println("  1) VEHICLE");
+        System.out.println("  2) PARKING SPACE");
+        System.out.println("  3) PARKING TRANSACTION");
+        System.out.println("  4) REPORTS");
+        System.out.println("  5) EXIT");
+        
+       
+        System.out.println("============================================");
 
             System.out.print("Enter Action (1-5): ");
             int act = 0;

@@ -9,15 +9,19 @@ public class Vehicle {
         boolean exit = true;
 
         do {
-            System.out.println("-------------------------------------");
-            System.out.println("VEHICLE PANEL");
-            System.out.println("-------------------------------------");
-            System.out.println("(1)ADD VEHICLE");
-            System.out.println("(2)VIEW VEHICLE");
-            System.out.println("(3)UPDATE VEHICLE");
-            System.out.println("(4)DELETE VEHICLE");
-            System.out.println("(5)EXIT");
-            System.out.println("-------------------------------------");
+        System.out.println("=====================================");
+        System.out.println("        VEHICLE MANAGEMENT PANEL     ");
+        System.out.println("=====================================");
+
+        
+        System.out.println("  1) Add Vehicle");
+        System.out.println("  2) View Vehicle");
+        System.out.println("  3) Update Vehicle");
+        System.out.println("  4) Delete Vehicle");
+        System.out.println("  5) Exit");
+        
+       
+        System.out.println("=====================================");
 
             System.out.println("Enter Action (1-5):");
             int act = 0;

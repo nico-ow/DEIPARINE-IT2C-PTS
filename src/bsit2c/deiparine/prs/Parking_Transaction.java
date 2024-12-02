@@ -11,16 +11,19 @@ public class Parking_Transaction {
         boolean exit = true;
         
         do {
-            System.out.println("-------------------------------------");
-            System.out.println("TRANSACTIONS PANEL");
-            System.out.println("-------------------------------------");
-            System.out.println("(1)ADD RECORD");
-            System.out.println("(2)VIEW RECORD");
-            System.out.println("(3)UPDATE RECORD");
-            System.out.println("(4)DELETE RECORD");
-            System.out.println("(5)EXIT");
-            System.out.println("-------------------------------------");
-            
+        System.out.println("=====================================");
+        System.out.println("      TRANSACTIONS MANAGEMENT       ");
+        System.out.println("=====================================");
+
+       
+        System.out.println("  1) Add Record");
+        System.out.println("  2) View Record");
+        System.out.println("  3) Update Record");
+        System.out.println("  4) Delete Record");
+        System.out.println("  5) Exit");
+        
+        
+        System.out.println("=====================================");
             System.out.println("Enter Action (1-5):");
             int act = 0;
             boolean validAction = false;
